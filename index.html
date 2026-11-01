@@ -1,147 +1,188 @@
+
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Anonymous Project · Wear the Shirt, Feed a Neighbor</title>
-<meta name="description" content="Pre-order the Anonymous Project shirt (₱500). Proceeds help us bring food and basic necessities to an Indigenous community and to people living on the street before the year ends.">
+<meta name="description" content="Pre-order the Anonymous Project shirt (₱550). Proceeds help us bring food and basic necessities to an Indigenous community and to people living on the street before the year ends.">
 <meta property="og:title" content="Anonymous Project · Wear the Shirt, Feed a Neighbor">
 <meta property="og:description" content="Pre-order a shirt and help us share food and basic necessities with an Indigenous community before the year ends.">
 <meta property="og:image" content="shirt-back.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --ink:#0d0d0d;
-    --paper:#fbf7f0;
-    --card:#ffffff;
-    --sun:#f2a33a;
-    --sun-deep:#c97512;
-    --muted:#5c5850;
-    --line:#e7dfd0;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:Montserrat,Inter,sans-serif;line-height:1.12;letter-spacing:-.01em}
-  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
-  a{color:inherit}
+:root{
+  --ink:#0d0d0d;
+  --paper:#fbf7f0;
+  --card:#ffffff;
+  --sun:#f2a33a;
+  --sun-deep:#c97512;
+  --muted:#5c5850;
+  --line:#e7dfd0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Montserrat,Inter,sans-serif;line-height:1.12;letter-spacing:-.01em}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+a{color:inherit}
 
-  /* HERO */
-  .hero{text-align:center;padding:36px 0 56px;position:relative;overflow:hidden}
-  .hero::before{content:"";position:absolute;left:50%;top:-200px;width:780px;height:780px;transform:translateX(-50%);
-    background:radial-gradient(circle,rgba(242,163,58,.38),rgba(242,163,58,0) 65%);z-index:0}
-  .hero>*{position:relative;z-index:1}
-  .logo{width:150px;margin:0 auto 26px;display:block}
-  .logo img{width:100%;height:auto;display:block}
-  .hero h1{font-size:clamp(2.3rem,6.8vw,4.1rem);font-weight:900;max-width:14ch;margin:0 auto 16px}
-  .hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%);padding:0 .08em}
-  .hero p.lead{font-size:1.15rem;max-width:58ch;margin:0 auto 28px;color:#2b2925}
-  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-family:Montserrat;font-weight:800;
-    padding:16px 30px;border-radius:999px;font-size:1rem;transition:transform .15s, background .15s;border:0;cursor:pointer}
-  .btn:hover{transform:translateY(-2px);background:#262626}
-  .btn.sun{background:var(--sun);color:var(--ink)}
-  .btn.sun:hover{background:#e29327}
-  .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
-  .btn.ghost:hover{background:var(--ink);color:#fff}
-  .btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
-  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600}
+/* HERO */
+.hero{text-align:center;padding:36px 0 56px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:-200px;width:780px;height:780px;transform:translateX(-50%);background:radial-gradient(circle,rgba(242,163,58,.38),rgba(242,163,58,0) 65%);z-index:0}
+.hero>*{position:relative;z-index:1}
+.logo{width:150px;margin:0 auto 26px;display:block}
+.logo img{width:100%;height:auto;display:block}
+.hero h1{font-size:clamp(2.3rem,6.8vw,4.1rem);font-weight:900;max-width:14ch;margin:0 auto 16px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%);padding:0 .08em}
+.hero p.lead{font-size:1.15rem;max-width:58ch;margin:0 auto 28px;color:#2b2925}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-family:Montserrat;font-weight:800;padding:16px 30px;border-radius:999px;font-size:1rem;transition:transform .15s,background .15s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px);background:#262626}
+.btn.sun{background:var(--sun);color:var(--ink)}
+.btn.sun:hover{background:#e29327}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600}
 
-  /* PROGRESS */
-  .progress{background:var(--ink);color:#fff;padding:28px 0}
-  .progress .row{display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:space-between}
-  .progress .stat{font-family:Montserrat;font-weight:800;font-size:1.9rem;line-height:1}
-  .progress .stat small{display:block;font-family:Inter;font-weight:500;font-size:.85rem;opacity:.7;margin-top:6px}
-  .bar{flex:1 1 280px;min-width:240px}
-  .bar .track{height:14px;border-radius:99px;background:#2e2e2e;overflow:hidden}
-  .bar .fill{height:100%;width:0;background:linear-gradient(90deg,var(--sun),#ffd08a);border-radius:99px;transition:width 1.2s ease}
-  .bar .cap{display:flex;justify-content:space-between;font-size:.82rem;opacity:.8;margin-top:8px}
+/* PROGRESS */
+.progress{background:var(--ink);color:#fff;padding:28px 0}
+.progress .row{display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.progress .stat{font-family:Montserrat;font-weight:800;font-size:1.9rem;line-height:1}
+.progress .stat small{display:block;font-family:Inter;font-weight:500;font-size:.85rem;opacity:.7;margin-top:6px}
+.bar{flex:1 1 280px;min-width:240px}
+.bar .track{height:14px;border-radius:99px;background:#2e2e2e;overflow:hidden}
+.bar .fill{height:100%;width:0;background:linear-gradient(90deg,var(--sun),#ffd08a);border-radius:99px;transition:width 1.2s ease}
+.bar .cap{display:flex;justify-content:space-between;font-size:.82rem;opacity:.8;margin-top:8px}
 
-  /* SECTIONS */
-  section{padding:64px 0}
-  .kicker{font-family:Montserrat;font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sun-deep);margin-bottom:10px}
-  h2{font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:900;margin-bottom:16px}
-  .two{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
-  .story p{margin-bottom:14px;color:#2b2925;font-size:1.05rem}
-  .verse{background:var(--ink);color:#fff;border-radius:22px;padding:32px 30px}
-  .verse q{display:block;quotes:none;font-family:Montserrat;font-weight:800;font-size:1.4rem;line-height:1.3}
-  .verse q span{color:var(--sun)}
-  .verse cite{display:block;margin-top:14px;font-style:normal;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:30px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
-  .card .ic{font-size:1.8rem;margin-bottom:8px}
-  .card h3{font-size:1.05rem;margin-bottom:6px}
-  .card p{color:var(--muted);font-size:.95rem}
+/* SECTIONS */
+section{padding:64px 0}
+.kicker{font-family:Montserrat;font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sun-deep);margin-bottom:10px}
+h2{font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:900;margin-bottom:16px}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.story p{margin-bottom:14px;color:#2b2925;font-size:1.05rem}
+.verse{background:var(--ink);color:#fff;border-radius:22px;padding:32px 30px}
+.verse q{display:block;quotes:none;font-family:Montserrat;font-weight:800;font-size:1.4rem;line-height:1.3}
+.verse q span{color:var(--sun)}
+.verse cite{display:block;margin-top:14px;font-style:normal;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.card .ic{font-size:1.8rem;margin-bottom:8px}
+.card h3{font-size:1.05rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem}
 
-  /* SHIRT */
-  .shirt{background:#efe9dc;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
-  .shirt .sub{max-width:54ch;margin:0 auto 28px;color:#2b2925}
-  .shirtgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:0 auto}
-  .shirtgrid figure{background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
-  .shirtgrid img{width:100%;height:auto;display:block}
-  .shirtgrid figcaption{padding:10px;font-family:Montserrat;font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+/* SHIRT */
+.shirt{background:#efe9dc;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.shirt .sub{max-width:54ch;margin:0 auto 28px;color:#2b2925}
+.shirtgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:0 auto}
+.shirtgrid figure{background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.shirtgrid img{width:100%;height:auto;display:block}
+.shirtgrid figcaption{padding:10px;font-family:Montserrat;font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
 
-  /* PAY */
-  .pay{background:#fff;border-bottom:1px solid var(--line)}
-  .paygrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
-  .qrcard{background:var(--paper);border:2px dashed var(--ink);border-radius:26px;padding:20px;text-align:center}
-  .qrcard h3{font-size:1.05rem;margin-bottom:12px}
-  .qrframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1.05}
-  .qrframe img{width:100%;height:100%;object-fit:contain;display:block}
-  .qrph{display:none;font-size:.9rem;color:var(--muted);padding:12px}
-  .acct{margin-top:14px;font-size:.92rem}
-  .acct strong{font-family:Montserrat}
-  .copy{margin-top:8px;background:#fff;border:1px solid var(--ink);border-radius:999px;padding:7px 16px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.88rem}
-  .copy:hover{background:var(--ink);color:#fff}
+/* PAY */
+.pay{background:#fff;border-bottom:1px solid var(--line)}
+.paygrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+.qrcard{background:var(--paper);border:2px dashed var(--ink);border-radius:26px;padding:20px;text-align:center}
+.qrcard h3{font-size:1.05rem;margin-bottom:12px}
+.qrframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1.05}
+.qrframe img{width:100%;height:100%;object-fit:contain;display:block}
+.qrph{display:none;font-size:.9rem;color:var(--muted);padding:12px}
+.qr-instruction{font-family:Montserrat;font-weight:800;font-size:.9rem;margin-top:12px}
+.acct{margin-top:10px;font-size:.92rem}
+.acct strong{font-family:Montserrat}
+.copy{margin-top:8px;background:#fff;border:1px solid var(--ink);border-radius:999px;padding:7px 16px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.88rem}
+.copy:hover{background:var(--ink);color:#fff}
 
-  .orderrow{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:44px;align-items:start}
-  .price{font-family:Montserrat;font-weight:900;font-size:2.4rem}
-  .price small{font-size:.9rem;font-weight:600;color:var(--muted)}
-  .sizes{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 6px}
-  .sizes span{border:1.5px solid var(--ink);border-radius:10px;padding:5px 12px;font-weight:700;font-size:.9rem}
-  .allsizes{font-size:.9rem;color:var(--muted);margin-bottom:18px}
-  .calc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
-  .qty{display:flex;align-items:center;gap:10px}
-  .qty button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;font-size:1.2rem;font-weight:800;cursor:pointer}
-  .qty button:hover{background:var(--ink);color:#fff}
-  .qty output{min-width:28px;text-align:center;font-family:Montserrat;font-weight:800;font-size:1.2rem}
-  .total{font-family:Montserrat;font-weight:900;font-size:1.4rem;text-align:right}
-  .total small{display:block;font-family:Inter;font-weight:500;font-size:.78rem;color:var(--muted)}
-  .steps{list-style:none;counter-reset:s}
-  .steps li{counter-increment:s;display:flex;gap:16px;margin-bottom:18px}
-  .steps li::before{content:counter(s);flex:0 0 40px;height:40px;border-radius:50%;background:var(--sun);font-family:Montserrat;font-weight:900;display:grid;place-items:center}
-  .steps b{font-family:Montserrat;display:block;margin-bottom:2px}
-  .steps span{color:var(--muted);font-size:.96rem}
-  .note{background:#fff7e8;border-left:5px solid var(--sun);border-radius:10px;padding:14px 16px;font-size:.93rem;margin-top:16px}
+.orderrow{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:44px;align-items:start}
+.price{font-family:Montserrat;font-weight:900;font-size:2.4rem}
+.price small{font-size:.9rem;font-weight:600;color:var(--muted)}
+.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 6px}
+.sizes span{border:1.5px solid var(--ink);border-radius:10px;padding:5px 12px;font-weight:700;font-size:.9rem}
+.allsizes{font-size:.9rem;color:var(--muted);margin-bottom:18px}
+.calc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;font-size:1.2rem;font-weight:800;cursor:pointer}
+.qty button:hover{background:var(--ink);color:#fff}
+.qty output{min-width:28px;text-align:center;font-family:Montserrat;font-weight:800;font-size:1.2rem}
+.total{font-family:Montserrat;font-weight:900;font-size:1.4rem;text-align:right}
+.total small{display:block;font-family:Inter;font-weight:500;font-size:.78rem;color:var(--muted)}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:16px;margin-bottom:18px}
+.steps li::before{content:counter(s);flex:0 0 40px;height:40px;border-radius:50%;background:var(--sun);font-family:Montserrat;font-weight:900;display:grid;place-items:center}
+.steps b{font-family:Montserrat;display:block;margin-bottom:2px}
+.steps span{color:var(--muted);font-size:.96rem}
+.note{background:#fff7e8;border-left:5px solid var(--sun);border-radius:10px;padding:14px 16px;font-size:.93rem;margin-top:16px}
 
-  /* FINAL + FOOTER */
-  .final{text-align:center}
-  .final h2{max-width:18ch;margin:0 auto 14px}
-  .final p{max-width:56ch;margin:0 auto 24px;color:#2b2925}
-  footer{background:var(--ink);color:#d8d4cb;text-align:center;padding:40px 20px;font-size:.9rem}
-  footer img{width:78px;filter:invert(1);display:block;margin:0 auto 14px}
-  footer a{color:var(--sun)}
-  footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+/* ORDER FORM */
+.order-form{margin-top:18px;display:grid;gap:14px}
+.field label{display:block;font-weight:700;font-size:.9rem;margin-bottom:6px}
+.field input,.field select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus{outline:2px solid var(--sun);border-color:var(--sun)}
 
-  @media(max-width:760px){
-    .two,.orderrow{grid-template-columns:1fr}
-    .paygrid{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}
-    section{padding:48px 0}
-  }
-  @media(max-width:460px){
-    .shirtgrid{gap:10px}
-  }
+/* SHIRT SIZE ERROR - FORCE RED */
+.field select.invalid,
+.field select.invalid:focus,
+.field select.invalid:hover{
+  border:3px solid #dc2626 !important;
+  background:#fee2e2 !important;
+  color:#b91c1c !important;
+  outline:3px solid #dc2626 !important;
+  outline-offset:1px;
+  box-shadow:0 0 0 4px rgba(220,38,38,.25) !important;
+}
+
+.field select.invalid option{
+  background:#fff;
+  color:#0d0d0d;
+}
+
+/* HIDE COMPLETE ADDRESS UNTIL LOCATION IS SELECTED */
+.location-detail{
+  display:none;
+}
+
+.order-help{font-size:.85rem;color:var(--muted);margin-top:5px}
+.order-form .btn{width:100%;text-align:center}
+.form-error{color:#dc2626;font-size:.9rem;font-weight:700;display:none}
+
+/* DONATION */
+.donation{padding:40px 0;background:#fff;border-bottom:1px solid var(--line)}
+.donation-inner{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;text-align:center}
+.donation h2{font-size:clamp(1.5rem,4vw,2rem);margin-bottom:12px}
+.donation p{max-width:62ch;margin:0 auto 16px;color:#2b2925}
+.donation .donation-note{font-size:.9rem;color:var(--muted);margin-top:12px;margin-bottom:0}
+.donation .btn{margin-top:8px}
+
+/* FINAL + FOOTER */
+.final{text-align:center}
+.final h2{max-width:18ch;margin:0 auto 14px}
+.final p{max-width:56ch;margin:0 auto 24px;color:#2b2925}
+footer{background:var(--ink);color:#d8d4cb;text-align:center;padding:40px 20px;font-size:.9rem}
+footer img{width:78px;filter:invert(1);display:block;margin:0 auto 14px}
+footer a{color:var(--sun)}
+footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+
+@media(max-width:760px){
+  .two,.orderrow{grid-template-columns:1fr}
+  .paygrid{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}
+  section{padding:48px 0}
+}
+@media(max-width:460px){
+  .shirtgrid{gap:10px}
+  .donation-inner{padding:24px 18px}
+}
 </style>
 </head>
+
 <body>
 
-<!-- ============ HERO ============ -->
 <header class="hero">
   <div class="wrap">
     <div class="logo"><img src="logo.png" alt="Anonymous Project · here to help"></div>
-
     <h1>Wear the shirt. <em>Feed a neighbor.</em></h1>
     <p class="lead">
       Every shirt you pre-order helps us bring food and basic necessities to an Indigenous community
@@ -152,14 +193,13 @@
       <a class="btn ghost" href="https://www.facebook.com/profile.php?id=61596242784817" target="_blank" rel="noopener">Visit our Facebook page</a>
     </div>
     <div class="chips">
-      <span class="chip">👕 Pre-order open · ₱500</span>
+      <span class="chip">👕 Pre-order open · ₱550</span>
       <span class="chip">🍚 Food &amp; basic necessities</span>
       <span class="chip" id="daysChip">⏳ Ends Dec 31</span>
     </div>
   </div>
 </header>
 
-<!-- ============ PROGRESS ============ -->
 <div class="progress">
   <div class="wrap row">
     <div class="stat"><span id="shirtsSold">0</span><small>shirts pre-ordered</small></div>
@@ -171,13 +211,12 @@
   </div>
 </div>
 
-<!-- ============ STORY ============ -->
 <section>
   <div class="wrap two">
     <div class="story">
       <div class="kicker">Why we are doing this</div>
       <h2>Some people go to sleep hungry tonight. We can change that.</h2>
-      <p>We are a group of friends who believe help should not wait for a perfect moment.
+      <p>We are a group of people who believe help should not wait for a perfect moment.
          So we made a shirt, and we are using it to fund something real.</p>
       <p>Before the year ends, our team will visit an <b>Indigenous community</b> and share food and
          basic necessities with its members, and reach out to people on the street who have no home.
@@ -189,7 +228,6 @@
       <cite>1 John 3:18</cite>
     </div>
   </div>
-
   <div class="wrap">
     <div class="cards">
       <div class="card"><div class="ic">🍚</div><h3>Food to share</h3><p>Meals prepared and handed out personally.</p></div>
@@ -200,7 +238,6 @@
   </div>
 </section>
 
-<!-- ============ SHIRT ============ -->
 <section class="shirt">
   <div class="wrap">
     <div class="kicker">The shirt</div>
@@ -210,15 +247,28 @@
       <figure><img src="shirt-front.png" alt="Anonymous Project shirt, front view" loading="lazy"><figcaption>Front</figcaption></figure>
       <figure><img src="shirt-back.png" alt="Anonymous Project shirt, back view with 1 John 3:18 design" loading="lazy"><figcaption>Back</figcaption></figure>
     </div>
+    <p style="font-family:Montserrat;font-weight:900;font-size:1.8rem;margin-top:24px">₱550 <span style="font-size:.9rem;font-weight:600;color:var(--muted)">per shirt</span></p>
   </div>
 </section>
 
-<!-- ============ PAYMENT ============ -->
+<section class="donation">
+  <div class="wrap">
+    <div class="donation-inner">
+      <div class="kicker">Another way to help</div>
+      <h2>Don't want a shirt? You can still donate.</h2>
+      <p>You can support Anonymous Project through a direct donation instead. Any amount is welcome. Every contribution will help us provide food and basic necessities to people in need.</p>
+      <p><strong>Simply scan either the GCash or Maya QR code in the payment section below and enter the amount you wish to give.</strong></p>
+      <button class="btn sun" id="donationBtn" type="button">Confirm Donation via Messenger</button>
+      <p class="donation-note">After sending your donation, use the button above to message us and attach your payment screenshot. No minimum donation. Every contribution counts.</p>
+    </div>
+  </div>
+</section>
+
 <section class="pay" id="pay">
   <div class="wrap">
-    <div class="kicker">Ready? It takes one minute</div>
-    <h2>Scan, pay, and you are in.</h2>
-    <p style="color:#2b2925;max-width:60ch">Choose whichever QR is easiest for you. Either one works.</p>
+    <div class="kicker">Payment methods</div>
+    <h2>Scan to Pay or Donate.</h2>
+    <p style="color:#2b2925;max-width:60ch">Both QR codes can be used for shirt payments and direct donations. Choose whichever is easiest for you.</p>
 
     <div class="paygrid">
       <div class="qrcard">
@@ -228,62 +278,121 @@
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
           <div class="qrph">QR 1 image not found. Save it as <code>qr1.png</code> next to this page.</div>
         </div>
+        <p class="qr-instruction">For Shirt Payments &amp; Donations</p>
         <div class="acct">
-          <div><strong>@shandiemae</strong></div>
+          <div><strong>Shandie Mae Carpe</strong> · @shandies</div>
           <button class="copy" type="button" data-copy="@shandiemae">Copy username</button>
         </div>
       </div>
 
       <div class="qrcard">
-        <h3>Option 2 · Maya</h3>
+        <h3>Option 2</h3>
         <div class="qrframe">
           <img src="qr2.png" alt="Maya QR code for Shandie Mae Carpe"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
           <div class="qrph">QR 2 image not found. Save it as <code>qr2.png</code> next to this page.</div>
         </div>
+        <p class="qr-instruction">For Shirt Payments &amp; Donations</p>
         <div class="acct">
           <div><strong>Shandie Mae Carpe</strong> · @shandies</div>
           <button class="copy" type="button" data-copy="@shandies">Copy username</button>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="pay" id="order">
+  <div class="wrap">
+    <div class="kicker">Shirt pre-order</div>
+    <h2>Complete your shirt order.</h2>
+    <p style="color:#2b2925;max-width:60ch">Once you've made your payment, complete the details below and send your order through Messenger.</p>
 
     <div class="orderrow">
       <div>
-        <div class="price">₱500 <small>per shirt</small></div>
-        <div class="sizes" id="sizes"></div>
-        <div class="allsizes">All sizes available. This is a pre-order.</div>
+        <div class="price">₱550 <small>per shirt</small></div>
+
+        <div class="field" style="margin:12px 0 16px">
+          <label for="shirtSize">Choose your shirt size</label>
+          <select id="shirtSize" name="shirtSize" form="orderForm" required>
+            <option value="">Select a size</option>
+            <option value="S">Small (S)</option>
+            <option value="M">Medium (M)</option>
+            <option value="L">Large (L)</option>
+            <option value="XL">Extra Large (XL)</option>
+            <option value="2XL">2XL</option>
+          </select>
+        </div>
 
         <div class="calc">
           <div class="qty">
             <button type="button" id="minus" aria-label="Fewer shirts">−</button>
-            <output id="qty">1</output>
+            <output id="qty" aria-live="polite">1</output>
             <button type="button" id="plus" aria-label="More shirts">+</button>
             <span style="font-size:.9rem;color:var(--muted)">shirt(s)</span>
           </div>
-          <div class="total"><span id="totalTxt">₱500</span><small>amount to send</small></div>
+          <div class="total"><span id="totalTxt">₱550</span><small>amount to send</small></div>
         </div>
       </div>
 
       <div>
         <ol class="steps">
-          <li><div><b>Scan a QR</b><span>Use Maya, GCash, or any app that supports the QR you picked.</span></div></li>
-          <li><div><b>Send your amount</b><span>₱500 per shirt. You are welcome to add extra to feed more people.</span></div></li>
-          <li><div><b>Send us your receipt</b><span>Screenshot it and message us your name, shirt size, and quantity.</span></div></li>
+          <li><div><b>Choose your shirt</b><span>Select your size and quantity.</span></div></li>
+          <li><div><b>Scan a QR and pay</b><span>Use Maya, GCash, or an app that supports the QR you picked. Pay the total shown.</span></div></li>
+          <li><div><b>Send your order and receipt</b><span>Enter your name, location, complete address, and payment method below. Messenger will open with your order details. Attach your payment screenshot in the chat.</span></div></li>
         </ol>
-        <a class="btn" href="https://m.me/1433914433139046" target="_blank" rel="noopener">Send my receipt</a>
+
+        <!-- novalidate lets the custom validation show the red size dropdown -->
+        <form class="order-form" id="orderForm" novalidate>
+          <div class="field">
+            <label for="customerName">Your name</label>
+            <input id="customerName" name="customerName" type="text" placeholder="Enter your full name" maxlength="80" required>
+          </div>
+
+          <div class="field">
+            <label for="paymentMethod">Payment method</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+              <option value="">Choose payment method</option>
+              <option value="GCash">GCash</option>
+              <option value="Maya">Maya</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="buyerLocation">Where are you located?</label>
+            <select id="buyerLocation" name="buyerLocation" required>
+              <option value="">Choose your location</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Europe">Europe</option>
+            </select>
+          </div>
+
+          <div class="field location-detail" id="addressDetail">
+            <label for="buyerAddress">Complete Address</label>
+            <input id="buyerAddress" name="buyerAddress" type="text" placeholder="Enter your complete address" maxlength="200">
+            <p class="order-help">Include your street, city, province/state, and postal code where applicable.</p>
+          </div>
+
+          <p class="form-error" id="formError" role="alert"></p>
+
+          <button class="btn" type="submit">Order via Messenger</button>
+        </form>
+
         <div class="note">💛 Proceeds go to food and basic necessities for our outreach. We will post photos and an update on our Facebook page after we visit.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FINAL CTA ============ -->
 <section class="final">
   <div class="wrap">
     <h2>Small shirt. Big heart.</h2>
     <p>Can’t buy a shirt right now? Sharing this page helps just as much. Send it to one friend today.</p>
     <button class="btn" id="shareBtn" type="button">Share this page</button>
+    <p id="shareMessage" style="display:none;margin:14px auto 0;color:#267a38;font-weight:600;">
+      Link copied! You can send it to your friends.
+    </p>
   </div>
 </section>
 
@@ -298,49 +407,215 @@
 <script>
 /* ===== EDIT THESE ===== */
 const CONFIG = {
-  price: 500,
+  price: 550,
   sizes: ["S","M","L","XL","2XL"],
   goalAmount: 50000,
-  raisedAmount: 0,        // update as money comes in
-  shirtsSold: 0,          // update as orders come in
-  deadline: "2026-12-31"
+  raisedAmount: 0,
+  shirtsSold: 0,
+  deadline: "2026-12-31",
+  messengerURL: "https://m.me/1433914433139046"
 };
 /* ====================== */
 
-const SHARE_URL = "https://www.facebook.com/profile.php?id=61596242784817"; // link the Share button sends
 const peso = n => "₱" + Number(n).toLocaleString("en-PH");
 const $ = id => document.getElementById(id);
 
-$("sizes").innerHTML = CONFIG.sizes.map(s => `<span>${s}</span>`).join("");
 $("shirtsSold").textContent = CONFIG.shirtsSold;
 $("raisedTxt").textContent = peso(CONFIG.raisedAmount) + " raised";
 $("goalTxt").textContent = "Goal " + peso(CONFIG.goalAmount);
 
 const pct = Math.min(100, Math.round(CONFIG.raisedAmount / CONFIG.goalAmount * 100));
-requestAnimationFrame(() => setTimeout(() => $("fill").style.width = Math.max(pct, 2) + "%", 200));
+requestAnimationFrame(() => setTimeout(() => {
+  $("fill").style.width = Math.max(pct, 2) + "%";
+}, 200));
 
-const days = Math.max(0, Math.ceil((new Date(CONFIG.deadline + "T23:59:59") - new Date()) / 864e5));
+const days = Math.max(0, Math.ceil(
+  (new Date(CONFIG.deadline + "T23:59:59") - new Date()) / 864e5
+));
 $("daysLeft").textContent = days;
 $("daysChip").textContent = "⏳ " + days + " days left";
 
 let qty = 1;
-const draw = () => { $("qty").textContent = qty; $("totalTxt").textContent = peso(qty * CONFIG.price); };
-$("minus").onclick = () => { qty = Math.max(1, qty - 1); draw(); };
-$("plus").onclick  = () => { qty = Math.min(99, qty + 1); draw(); };
-draw();
 
-document.querySelectorAll(".copy").forEach(btn => btn.addEventListener("click", async () => {
-  const old = btn.textContent;
-  try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent = "Copied ✓"; }
-  catch { btn.textContent = "Copy it from the QR"; }
-  setTimeout(() => btn.textContent = old, 2000);
-}));
+const draw = () => {
+  $("qty").textContent = qty;
+  $("totalTxt").textContent = peso(qty * CONFIG.price);
+};
 
-$("shareBtn").addEventListener("click", async () => {
-  const data = { title: "Anonymous Project: Wear the shirt, feed a neighbor", text: "Pre-order a shirt and help us share food with an Indigenous community.", url: SHARE_URL };
-  if (navigator.share) { try { await navigator.share(data); } catch {} }
-  else { try { await navigator.clipboard.writeText(SHARE_URL); $("shareBtn").textContent = "Link copied ✓"; } catch {} }
+$("minus").addEventListener("click", () => {
+  qty = Math.max(1, qty - 1);
+  draw();
 });
+
+$("plus").addEventListener("click", () => {
+  qty = Math.min(99, qty + 1);
+  draw();
+});
+
+/* COPY PAYMENT USERNAMES */
+document.querySelectorAll(".copy").forEach(btn => {
+  btn.addEventListener("click", async () => {
+    const old = btn.textContent;
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      btn.textContent = "Copied ✓";
+    } catch {
+      btn.textContent = "Copy it from the QR";
+    }
+    setTimeout(() => btn.textContent = old, 2000);
+  });
+});
+
+/* SHOW COMPLETE ADDRESS ONLY AFTER LOCATION IS SELECTED */
+$("buyerLocation").addEventListener("change", () => {
+  const location = $("buyerLocation").value;
+
+  $("addressDetail").style.display = location ? "block" : "none";
+  $("buyerAddress").required = location !== "";
+  $("buyerAddress").value = "";
+
+  clearFormError();
+});
+
+/* FORM ERROR HELPERS */
+const clearFormError = () => {
+  $("formError").textContent = "";
+  $("formError").style.display = "none";
+};
+
+const showFormError = message => {
+  $("formError").textContent = message;
+  $("formError").style.display = "block";
+};
+
+/* CLEAR SHIRT SIZE ERROR WHEN A SIZE IS SELECTED */
+$("shirtSize").addEventListener("change", () => {
+  if ($("shirtSize").value !== "") {
+    $("shirtSize").classList.remove("invalid");
+    clearFormError();
+  }
+});
+
+$("customerName").addEventListener("input", clearFormError);
+$("paymentMethod").addEventListener("change", clearFormError);
+$("buyerAddress").addEventListener("input", clearFormError);
+
+/* ORDER VIA MESSENGER */
+$("orderForm").addEventListener("submit", event => {
+  event.preventDefault();
+
+  const name = $("customerName").value.trim();
+  const size = $("shirtSize").value.trim();
+  const payment = $("paymentMethod").value;
+  const location = $("buyerLocation").value;
+  const address = $("buyerAddress").value.trim();
+  const total = qty * CONFIG.price;
+
+  const sizeSelect = $("shirtSize");
+
+  clearFormError();
+  sizeSelect.classList.remove("invalid");
+
+  /* CHECK SIZE FIRST SO IT TURNS RED EVEN IF OTHER FIELDS ARE EMPTY */
+  if (!size || !CONFIG.sizes.includes(size)) {
+    sizeSelect.classList.add("invalid");
+    showFormError("Please select your shirt size.");
+
+    sizeSelect.scrollIntoView({behavior:"smooth", block:"center"});
+    sizeSelect.focus();
+    return;
+  }
+
+  if (!name) {
+    showFormError("Please enter your name.");
+    $("customerName").focus();
+    return;
+  }
+
+  if (!payment) {
+    showFormError("Please choose your payment method.");
+    $("paymentMethod").focus();
+    return;
+  }
+
+  if (!location) {
+    showFormError("Please choose your location.");
+    $("buyerLocation").focus();
+    return;
+  }
+
+  if (!address) {
+    showFormError("Please enter your complete address.");
+    $("buyerAddress").focus();
+    return;
+  }
+
+  const locationDetails = [
+    "Location: " + location,
+    "Complete Address: " + address
+  ].join("\n");
+
+  const message = [
+    "Hi! I'd like to place an order from Anonymous Project.",
+    "",
+    "CUSTOMER ORDER DETAILS",
+    "Name: " + name,
+    "Shirt size: " + size,
+    "Quantity: " + qty,
+    "Price per shirt: " + peso(CONFIG.price),
+    "Total amount: " + peso(total),
+    "Payment method: " + payment,
+    locationDetails,
+    "",
+    "I have made my payment. I'll attach my payment receipt here.",
+    "Thank you!"
+  ].join("\n");
+
+  const messengerLink = CONFIG.messengerURL + "?text=" + encodeURIComponent(message);
+  window.open(messengerLink, "_blank", "noopener,noreferrer");
+});
+
+/* DONATION CONFIRMATION VIA MESSENGER */
+$("donationBtn").addEventListener("click", () => {
+  const message = [
+    "Hello! I made a direct donation to Anonymous Project.",
+    "",
+    "Donation amount: ",
+    "",
+    "I'll attach my payment screenshot here.",
+    "Thank you!"
+  ].join("\n");
+
+  const messengerLink = CONFIG.messengerURL + "?text=" + encodeURIComponent(message);
+  window.open(messengerLink, "_blank", "noopener,noreferrer");
+});
+
+/* SHARE PAGE: COPY THE WEBSITE URL */
+$("shareBtn").addEventListener("click", async () => {
+  const btn = $("shareBtn");
+  const message = $("shareMessage");
+  const originalText = "Share this page";
+
+  try {
+    await navigator.clipboard.writeText(window.location.href);
+    btn.textContent = "Link copied ✓";
+    message.style.display = "block";
+    message.style.color = "#267a38";
+    message.textContent = "Link copied! You can send it to your friends.";
+
+    setTimeout(() => {
+      btn.textContent = originalText;
+      message.style.display = "none";
+    }, 3000);
+  } catch {
+    message.style.display = "block";
+    message.style.color = "#c0392b";
+    message.textContent = "Unable to copy. Please copy the website URL from your browser.";
+  }
+});
+
+draw();
 </script>
+
 </body>
 </html>
