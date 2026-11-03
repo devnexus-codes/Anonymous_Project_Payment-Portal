@@ -9,6 +9,7 @@
 <meta property="og:title" content="Anonymous Project · Wear the Shirt, Feed a Neighbor">
 <meta property="og:description" content="Pre-order a shirt and help us share food and basic necessities with an Indigenous community before the year ends.">
 <meta property="og:image" content="shirt-back.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -134,16 +135,13 @@ h2{font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:900;margin-bottom:16px}
   outline-offset:1px;
   box-shadow:0 0 0 4px rgba(220,38,38,.25) !important;
 }
-
 .field select.invalid option{
   background:#fff;
   color:#0d0d0d;
 }
 
 /* HIDE COMPLETE ADDRESS UNTIL LOCATION IS SELECTED */
-.location-detail{
-  display:none;
-}
+.location-detail{display:none}
 
 .order-help{font-size:.85rem;color:var(--muted);margin-top:5px}
 .order-form .btn{width:100%;text-align:center}
@@ -188,10 +186,12 @@ footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin
       Every shirt you pre-order helps us bring food and basic necessities to an Indigenous community
       and to people living on the street, before this year ends. Wear your faith with action.
     </p>
+
     <div class="btnrow">
-      <a class="btn sun" href="#pay">Pre-order my shirt</a>
-      <a class="btn ghost" href="https://www.facebook.com/profile.php?id=61596242784817" target="_blank" rel="noopener">Visit our Facebook page</a>
+      <a class="btn sun" href="#order">Pre-order my shirt</a>
+      <a class="btn ghost" href="#donation">Donate now</a>
     </div>
+
     <div class="chips">
       <span class="chip">👕 Pre-order open · ₱550</span>
       <span class="chip">🍚 Food &amp; basic necessities</span>
@@ -202,12 +202,21 @@ footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin
 
 <div class="progress">
   <div class="wrap row">
-    <div class="stat"><span id="shirtsSold">1</span><small>shirts pre-ordered</small></div>
+    <div class="stat">
+      <span id="shirtsSold">1</span>
+      <small>shirts pre-ordered</small>
+    </div>
     <div class="bar">
       <div class="track"><div class="fill" id="fill"></div></div>
-      <div class="cap"><span id="raisedTxt">₱1 raised</span><span id="goalTxt">Goal ₱50,000</span></div>
+      <div class="cap">
+        <span id="raisedTxt">₱550 raised</span>
+        <span id="goalTxt">Goal ₱50,000</span>
+      </div>
     </div>
-    <div class="stat"><span id="daysLeft">–</span><small>days until year end</small></div>
+    <div class="stat">
+      <span id="daysLeft">–</span>
+      <small>days until year end</small>
+    </div>
   </div>
 </div>
 
@@ -228,6 +237,7 @@ footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin
       <cite>1 John 3:18</cite>
     </div>
   </div>
+
   <div class="wrap">
     <div class="cards">
       <div class="card"><div class="ic">🍚</div><h3>Food to share</h3><p>Meals prepared and handed out personally.</p></div>
@@ -251,7 +261,7 @@ footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin
   </div>
 </section>
 
-<section class="donation">
+<section class="donation" id="donation">
   <div class="wrap">
     <div class="donation-inner">
       <div class="kicker">Another way to help</div>
@@ -342,7 +352,6 @@ footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin
           <li><div><b>Send your order and receipt</b><span>Enter your name, location, complete address, and payment method below. Messenger will open with your order details. Attach your payment screenshot in the chat.</span></div></li>
         </ol>
 
-        <!-- novalidate lets the custom validation show the red size dropdown -->
         <form class="order-form" id="orderForm" novalidate>
           <div class="field">
             <label for="customerName">Your name</label>
@@ -375,7 +384,6 @@ footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin
           </div>
 
           <p class="form-error" id="formError" role="alert"></p>
-
           <button class="btn" type="submit">Order via Messenger</button>
         </form>
 
@@ -401,40 +409,46 @@ footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin
   <div>Here to help.</div>
   <div class="links">
     <a href="https://m.me/1433914433139046" target="_blank" rel="noopener">Message us</a>
+    <a href="https://www.facebook.com/profile.php?id=61596242784817" target="_blank" rel="noopener">Visit our Facebook page</a>
   </div>
 </footer>
 
 <script>
-/* ===== EDIT THESE ===== */
+/* ===== EDIT THESE CAMPAIGN NUMBERS ===== */
 const CONFIG = {
   price: 550,
   sizes: ["S","M","L","XL","2XL"],
   goalAmount: 50000,
-  raisedAmount: 0,
-  shirtsSold: 0,
+  raisedAmount: 550,
+  shirtsSold: 1,
   deadline: "2026-12-31",
   messengerURL: "https://m.me/1433914433139046"
 };
-/* ====================== */
+/* ======================================= */
 
 const peso = n => "₱" + Number(n).toLocaleString("en-PH");
 const $ = id => document.getElementById(id);
 
+/* CAMPAIGN PROGRESS */
 $("shirtsSold").textContent = CONFIG.shirtsSold;
 $("raisedTxt").textContent = peso(CONFIG.raisedAmount) + " raised";
 $("goalTxt").textContent = "Goal " + peso(CONFIG.goalAmount);
 
 const pct = Math.min(100, Math.round(CONFIG.raisedAmount / CONFIG.goalAmount * 100));
+
 requestAnimationFrame(() => setTimeout(() => {
   $("fill").style.width = Math.max(pct, 2) + "%";
 }, 200));
 
+/* DAYS LEFT */
 const days = Math.max(0, Math.ceil(
   (new Date(CONFIG.deadline + "T23:59:59") - new Date()) / 864e5
 ));
+
 $("daysLeft").textContent = days;
 $("daysChip").textContent = "⏳ " + days + " days left";
 
+/* QUANTITY AND TOTAL */
 let qty = 1;
 
 const draw = () => {
@@ -456,12 +470,14 @@ $("plus").addEventListener("click", () => {
 document.querySelectorAll(".copy").forEach(btn => {
   btn.addEventListener("click", async () => {
     const old = btn.textContent;
+
     try {
       await navigator.clipboard.writeText(btn.dataset.copy);
       btn.textContent = "Copied ✓";
     } catch {
       btn.textContent = "Copy it from the QR";
     }
+
     setTimeout(() => btn.textContent = old, 2000);
   });
 });
@@ -516,7 +532,7 @@ $("orderForm").addEventListener("submit", event => {
   clearFormError();
   sizeSelect.classList.remove("invalid");
 
-  /* CHECK SIZE FIRST SO IT TURNS RED EVEN IF OTHER FIELDS ARE EMPTY */
+  /* CHECK SIZE FIRST */
   if (!size || !CONFIG.sizes.includes(size)) {
     sizeSelect.classList.add("invalid");
     showFormError("Please select your shirt size.");
@@ -572,6 +588,7 @@ $("orderForm").addEventListener("submit", event => {
   ].join("\n");
 
   const messengerLink = CONFIG.messengerURL + "?text=" + encodeURIComponent(message);
+
   window.open(messengerLink, "_blank", "noopener,noreferrer");
 });
 
@@ -587,6 +604,7 @@ $("donationBtn").addEventListener("click", () => {
   ].join("\n");
 
   const messengerLink = CONFIG.messengerURL + "?text=" + encodeURIComponent(message);
+
   window.open(messengerLink, "_blank", "noopener,noreferrer");
 });
 
@@ -598,6 +616,7 @@ $("shareBtn").addEventListener("click", async () => {
 
   try {
     await navigator.clipboard.writeText(window.location.href);
+
     btn.textContent = "Link copied ✓";
     message.style.display = "block";
     message.style.color = "#267a38";
@@ -607,6 +626,7 @@ $("shareBtn").addEventListener("click", async () => {
       btn.textContent = originalText;
       message.style.display = "none";
     }, 3000);
+
   } catch {
     message.style.display = "block";
     message.style.color = "#c0392b";
