@@ -187,10 +187,29 @@ footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin
       and to people living on the street, before this year ends. Wear your faith with action.
     </p>
 
-    <div class="btnrow">
-      <a class="btn sun" href="#order">Pre-order my shirt</a>
-      <a class="btn ghost" href="#donation">Donate now</a>
-    </div>
+  <div class="btnrow">
+  <a class="btn sun" href="#order">Pre-order my shirt</a>
+  <a class="btn ghost" href="#donation">Donate now</a>
+</div>
+    .btnrow{
+  display:flex;
+  flex-direction:row;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:nowrap;
+}
+
+.btnrow .btn{
+  padding:14px 20px;
+  font-size:.9rem;
+}
+
+@media(max-width:420px){
+  .btnrow .btn{
+    padding:13px 12px;
+    font-size:.78rem;
+  }
+}
 
     <div class="chips">
       <span class="chip">👕 Pre-order open · ₱550</span>
