@@ -26,520 +26,214 @@
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:Inter,system-ui,sans-serif;
-  background:var(--paper);
-  color:var(--ink);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased
-}
-h1,h2,h3{
-  font-family:Montserrat,Inter,sans-serif;
-  line-height:1.12;
-  letter-spacing:-.01em
-}
+body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Montserrat,Inter,sans-serif;line-height:1.12;letter-spacing:-.01em}
 .wrap{max-width:980px;margin:0 auto;padding:0 20px}
 a{color:inherit}
 
 /* HERO */
-.hero{
-  text-align:center;
-  padding:36px 0 56px;
-  position:relative;
-  overflow:hidden
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-200px;
-  width:780px;
-  height:780px;
-  transform:translateX(-50%);
-  background:radial-gradient(circle,rgba(242,163,58,.38),rgba(242,163,58,0) 65%);
-  z-index:0
-}
+.hero{text-align:center;padding:36px 0 56px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:-200px;width:780px;height:780px;transform:translateX(-50%);background:radial-gradient(circle,rgba(242,163,58,.38),rgba(242,163,58,0) 65%);z-index:0}
 .hero>*{position:relative;z-index:1}
 .logo{width:150px;margin:0 auto 26px;display:block}
 .logo img{width:100%;height:auto;display:block}
-.hero h1{
-  font-size:clamp(2.3rem,6.8vw,4.1rem);
-  font-weight:900;
-  max-width:14ch;
-  margin:0 auto 16px
-}
-.hero h1 em{
-  font-style:normal;
-  background:linear-gradient(transparent 62%,var(--sun) 62%);
-  padding:0 .08em
-}
-.hero p.lead{
-  font-size:1.15rem;
-  max-width:58ch;
-  margin:0 auto 28px;
-  color:#2b2925
-}
+.hero h1{font-size:clamp(2.3rem,6.8vw,4.1rem);font-weight:900;max-width:14ch;margin:0 auto 16px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%);padding:0 .08em}
+.hero p.lead{font-size:1.15rem;max-width:58ch;margin:0 auto 28px;color:#2b2925}
 
-.btn{
-  display:inline-block;
-  background:var(--ink);
-  color:#fff;
-  text-decoration:none;
-  font-family:Montserrat;
-  font-weight:800;
-  padding:16px 30px;
-  border-radius:999px;
-  font-size:1rem;
-  transition:transform .15s,background .15s;
-  border:0;
-  cursor:pointer
-}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-family:Montserrat;font-weight:800;padding:16px 30px;border-radius:999px;font-size:1rem;transition:transform .15s,background .15s;border:0;cursor:pointer}
 .btn:hover{transform:translateY(-2px);background:#262626}
 .btn.sun{background:var(--sun);color:var(--ink)}
 .btn.sun:hover{background:#e29327}
-.btn.ghost{
-  background:transparent;
-  color:var(--ink);
-  border:2px solid var(--ink)
-}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
 .btn.ghost:hover{background:var(--ink);color:#fff}
 
-.btnrow{
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  flex-wrap:nowrap
-}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:nowrap}
 .btnrow .btn{padding:14px 20px;font-size:.9rem}
 
 @media(max-width:420px){
-  .btnrow .btn{padding:13px 12px;font-size:.78rem}
+  .btnrow .btn{
+    padding:13px 12px;
+    font-size:.78rem;
+  }
 }
 
-.chips{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:24px
-}
-.chip{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:7px 14px;
-  font-size:.88rem;
-  font-weight:600
-}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600}
 
 /* PROGRESS */
 .progress{background:var(--ink);color:#fff;padding:28px 0}
-.progress .row{
-  display:flex;
-  gap:28px;
-  align-items:center;
-  flex-wrap:wrap;
-  justify-content:space-between
-}
-.progress .stat{
-  font-family:Montserrat;
-  font-weight:800;
-  font-size:1.9rem;
-  line-height:1
-}
-.progress .stat small{
-  display:block;
-  font-family:Inter;
-  font-weight:500;
-  font-size:.85rem;
-  opacity:.7;
-  margin-top:6px
-}
+.progress .row{display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.progress .stat{font-family:Montserrat;font-weight:800;font-size:1.9rem;line-height:1}
+.progress .stat small{display:block;font-family:Inter;font-weight:500;font-size:.85rem;opacity:.7;margin-top:6px}
 .bar{flex:1 1 280px;min-width:240px}
-.bar .track{
-  height:14px;
-  border-radius:99px;
-  background:#2e2e2e;
-  overflow:hidden
-}
-.bar .fill{
-  height:100%;
-  width:0;
-  background:linear-gradient(90deg,var(--sun),#ffd08a);
-  border-radius:99px;
-  transition:width 1.2s ease
-}
-.bar .cap{
-  display:flex;
-  justify-content:space-between;
-  font-size:.82rem;
-  opacity:.8;
-  margin-top:8px
-}
+.bar .track{height:14px;border-radius:99px;background:#2e2e2e;overflow:hidden}
+.bar .fill{height:100%;width:0;background:linear-gradient(90deg,var(--sun),#ffd08a);border-radius:99px;transition:width 1.2s ease}
+.bar .cap{display:flex;justify-content:space-between;font-size:.82rem;opacity:.8;margin-top:8px}
 
 /* SECTIONS */
 section{padding:64px 0}
-.kicker{
-  font-family:Montserrat;
-  font-weight:800;
-  font-size:.78rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--sun-deep);
-  margin-bottom:10px
-}
-h2{
-  font-size:clamp(1.7rem,4.5vw,2.5rem);
-  font-weight:900;
-  margin-bottom:16px
-}
-.two{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:36px;
-  align-items:center
-}
-.story p{
-  margin-bottom:14px;
-  color:#2b2925;
-  font-size:1.05rem
-}
-.verse{
-  background:var(--ink);
+.kicker{font-family:Montserrat;font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sun-deep);margin-bottom:10px}
+h2{font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:900;margin-bottom:16px}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.story p{margin-bottom:14px;color:#2b2925;font-size:1.05rem}
+
+/* WHY WE ARE DOING THIS - BLACK PHOTO COLLAGE */
+.impact-section{
+  background:#080808;
   color:#fff;
-  border-radius:22px;
-  padding:32px 30px
-}
-.verse q{
-  display:block;
-  quotes:none;
-  font-family:Montserrat;
-  font-weight:800;
-  font-size:1.4rem;
-  line-height:1.3
-}
-.verse q span{color:var(--sun)}
-.verse cite{
-  display:block;
-  margin-top:14px;
-  font-style:normal;
-  font-size:.85rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  opacity:.75
+  padding:58px 0;
 }
 
-/* IMPACT PHOTO COLLAGE */
-.impact-section{
-  padding:35px 0 75px
+.impact-section .wrap{
+  max-width:1100px;
 }
-.impact-grid{
+
+.impact-collage{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  grid-template-rows:repeat(4,1fr);
-  aspect-ratio:1/1;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-rows:160px 190px 190px 160px;
   gap:8px;
-  padding:8px;
-  background:var(--ink);
-  border-radius:20px;
-  overflow:hidden
+  background:#080808;
 }
-.impact-item{
-  position:relative;
+
+.impact-photo{
   overflow:hidden;
-  background:#292929;
+  background:#171717;
   min-width:0;
-  min-height:0
+  min-height:0;
 }
-.impact-item img{
+
+.impact-photo img{
+  display:block;
   width:100%;
   height:100%;
-  display:block;
   object-fit:cover;
-  transition:transform .5s ease
+  transition:transform .5s ease;
 }
-.impact-item:hover img{transform:scale(1.045)}
 
-/* Text tile */
+.impact-photo:hover img{
+  transform:scale(1.04);
+}
+
+/* Two portrait photos at the top left */
+.impact-photo.portrait-one{
+  grid-column:1;
+  grid-row:1;
+}
+
+.impact-photo.portrait-two{
+  grid-column:2;
+  grid-row:1;
+}
+
+/* First landscape photo on the upper right */
+.impact-photo.landscape-one{
+  grid-column:3 / 5;
+  grid-row:1 / 3;
+}
+
+/* Text panel integrated into the collage */
 .impact-copy{
   grid-column:1 / 3;
-  grid-row:1 / 3;
-  background:#e9e5de;
+  grid-row:2 / 4;
+  background:#fbf7f0;
+  color:#111;
+  padding:clamp(24px,4vw,42px);
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:clamp(18px,3vw,34px);
-  color:var(--ink)
 }
-.impact-copy .kicker{margin-bottom:14px}
-.impact-copy h2{
-  font-size:clamp(1.5rem,3vw,2.4rem);
-  line-height:1.12;
-  margin-bottom:16px;
-  font-weight:900
-}
-.impact-copy h2 .highlight{
+
+.impact-copy .kicker{
   color:var(--sun-deep);
-  position:relative;
-  display:inline-block;
-  z-index:1
+  margin-bottom:14px;
 }
-.impact-copy h2 .highlight::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:2px;
-  width:100%;
-  height:9px;
-  background:rgba(242,163,58,.35);
-  z-index:-1
+
+.impact-copy h2{
+  font-size:clamp(1.7rem,3.5vw,2.6rem);
+  line-height:1.12;
+  margin-bottom:18px;
+  max-width:15ch;
 }
+
+.impact-copy h2 .highlight{
+  color:#d88735;
+}
+
 .impact-copy p{
-  font-size:clamp(.78rem,1.1vw,.95rem);
-  line-height:1.7;
-  color:#403c36;
-  margin-bottom:12px
-}
-.impact-copy .impact-note{
-  font-family:Montserrat;
-  font-weight:800;
-  font-size:.78rem;
-  letter-spacing:.04em;
-  color:var(--ink);
-  margin-top:6px
+  color:#38342f;
+  font-size:.96rem;
+  line-height:1.75;
+  margin-bottom:12px;
+  max-width:48ch;
 }
 
-/* Two landscape photos */
-.impact-landscape-one{
-  grid-column:3 / 5;
-  grid-row:1 / 2
-}
-.impact-landscape-two{
-  grid-column:3 / 5;
-  grid-row:2 / 3
+.impact-copy p:last-child{
+  margin-bottom:0;
 }
 
-/* Three portrait photos */
-.impact-portrait-one{
-  grid-column:1 / 2;
-  grid-row:3 / 5
+/* Third portrait photo at the bottom left */
+.impact-photo.portrait-three{
+  grid-column:1;
+  grid-row:4;
 }
-.impact-portrait-two{
-  grid-column:2 / 3;
-  grid-row:3 / 5
-}
-.impact-portrait-three{
-  grid-column:3 / 5;
-  grid-row:3 / 5
+
+/* Second landscape photo at the bottom right */
+.impact-photo.landscape-two{
+  grid-column:2 / 5;
+  grid-row:4;
 }
 
 /* SHIRT */
-.shirt{
-  background:#efe9dc;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  text-align:center
-}
-.shirt .sub{
-  max-width:54ch;
-  margin:0 auto 28px;
-  color:#2b2925
-}
-.shirtgrid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-  max-width:760px;
-  margin:0 auto
-}
-.shirtgrid figure{
-  background:#fff;
-  border-radius:22px;
-  overflow:hidden;
-  border:1px solid var(--line)
-}
+.shirt{background:#efe9dc;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.shirt .sub{max-width:54ch;margin:0 auto 28px;color:#2b2925}
+.shirtgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:0 auto}
+.shirtgrid figure{background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
 .shirtgrid img{width:100%;height:auto;display:block}
-.shirtgrid figcaption{
-  padding:10px;
-  font-family:Montserrat;
-  font-weight:700;
-  font-size:.85rem;
-  letter-spacing:.12em;
-  text-transform:uppercase
-}
+.shirtgrid figcaption{padding:10px;font-family:Montserrat;font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
 
 /* PAY */
 .pay{background:#fff;border-bottom:1px solid var(--line)}
-.paygrid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
-  margin-top:26px
-}
-.qrcard{
-  background:var(--paper);
-  border:2px dashed var(--ink);
-  border-radius:26px;
-  padding:20px;
-  text-align:center
-}
+.paygrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+.qrcard{background:var(--paper);border:2px dashed var(--ink);border-radius:26px;padding:20px;text-align:center}
 .qrcard h3{font-size:1.05rem;margin-bottom:12px}
-.qrframe{
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  aspect-ratio:1/1.05
-}
-.qrframe img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block
-}
-.qrph{
-  display:none;
-  font-size:.9rem;
-  color:var(--muted);
-  padding:12px
-}
-.qr-instruction{
-  font-family:Montserrat;
-  font-weight:800;
-  font-size:.9rem;
-  margin-top:12px
-}
+.qrframe{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1.05}
+.qrframe img{width:100%;height:100%;object-fit:contain;display:block}
+.qrph{display:none;font-size:.9rem;color:var(--muted);padding:12px}
+.qr-instruction{font-family:Montserrat;font-weight:800;font-size:.9rem;margin-top:12px}
 .acct{margin-top:10px;font-size:.92rem}
 .acct strong{font-family:Montserrat}
-.copy{
-  margin-top:8px;
-  background:#fff;
-  border:1px solid var(--ink);
-  border-radius:999px;
-  padding:7px 16px;
-  font-weight:600;
-  cursor:pointer;
-  font-family:inherit;
-  font-size:.88rem
-}
+.copy{margin-top:8px;background:#fff;border:1px solid var(--ink);border-radius:999px;padding:7px 16px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.88rem}
 .copy:hover{background:var(--ink);color:#fff}
 
-.orderrow{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:34px;
-  margin-top:44px;
-  align-items:start
-}
+.orderrow{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:44px;align-items:start}
 .price{font-family:Montserrat;font-weight:900;font-size:2.4rem}
 .price small{font-size:.9rem;font-weight:600;color:var(--muted)}
 .sizes{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 6px}
-.sizes span{
-  border:1.5px solid var(--ink);
-  border-radius:10px;
-  padding:5px 12px;
-  font-weight:700;
-  font-size:.9rem
-}
+.sizes span{border:1.5px solid var(--ink);border-radius:10px;padding:5px 12px;font-weight:700;font-size:.9rem}
 .allsizes{font-size:.9rem;color:var(--muted);margin-bottom:18px}
-.calc{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:16px 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-  flex-wrap:wrap
-}
+.calc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .qty{display:flex;align-items:center;gap:10px}
-.qty button{
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  border:1.5px solid var(--ink);
-  background:#fff;
-  font-size:1.2rem;
-  font-weight:800;
-  cursor:pointer
-}
+.qty button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;font-size:1.2rem;font-weight:800;cursor:pointer}
 .qty button:hover{background:var(--ink);color:#fff}
-.qty output{
-  min-width:28px;
-  text-align:center;
-  font-family:Montserrat;
-  font-weight:800;
-  font-size:1.2rem
-}
-.total{
-  font-family:Montserrat;
-  font-weight:900;
-  font-size:1.4rem;
-  text-align:right
-}
-.total small{
-  display:block;
-  font-family:Inter;
-  font-weight:500;
-  font-size:.78rem;
-  color:var(--muted)
-}
+.qty output{min-width:28px;text-align:center;font-family:Montserrat;font-weight:800;font-size:1.2rem}
+.total{font-family:Montserrat;font-weight:900;font-size:1.4rem;text-align:right}
+.total small{display:block;font-family:Inter;font-weight:500;font-size:.78rem;color:var(--muted)}
 .steps{list-style:none;counter-reset:s}
-.steps li{
-  counter-increment:s;
-  display:flex;
-  gap:16px;
-  margin-bottom:18px
-}
-.steps li::before{
-  content:counter(s);
-  flex:0 0 40px;
-  height:40px;
-  border-radius:50%;
-  background:var(--sun);
-  font-family:Montserrat;
-  font-weight:900;
-  display:grid;
-  place-items:center
-}
+.steps li{counter-increment:s;display:flex;gap:16px;margin-bottom:18px}
+.steps li::before{content:counter(s);flex:0 0 40px;height:40px;border-radius:50%;background:var(--sun);font-family:Montserrat;font-weight:900;display:grid;place-items:center}
 .steps b{font-family:Montserrat;display:block;margin-bottom:2px}
 .steps span{color:var(--muted);font-size:.96rem}
-.note{
-  background:#fff7e8;
-  border-left:5px solid var(--sun);
-  border-radius:10px;
-  padding:14px 16px;
-  font-size:.93rem;
-  margin-top:16px
-}
+.note{background:#fff7e8;border-left:5px solid var(--sun);border-radius:10px;padding:14px 16px;font-size:.93rem;margin-top:16px}
 
 /* ORDER FORM */
 .order-form{margin-top:18px;display:grid;gap:14px}
-.field label{
-  display:block;
-  font-weight:700;
-  font-size:.9rem;
-  margin-bottom:6px
-}
-.field input,.field select{
-  width:100%;
-  padding:13px 14px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  font:inherit;
-  background:#fff;
-  color:var(--ink)
-}
-.field input:focus,.field select:focus{
-  outline:2px solid var(--sun);
-  border-color:var(--sun)
-}
+.field label{display:block;font-weight:700;font-size:.9rem;margin-bottom:6px}
+.field input,.field select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus{outline:2px solid var(--sun);border-color:var(--sun)}
 
-/* SHIRT SIZE ERROR */
+/* SHIRT SIZE ERROR - FORCE RED */
 .field select.invalid,
 .field select.invalid:focus,
 .field select.invalid:hover{
@@ -548,113 +242,104 @@ h2{
   color:#b91c1c !important;
   outline:3px solid #dc2626 !important;
   outline-offset:1px;
-  box-shadow:0 0 0 4px rgba(220,38,38,.25) !important
+  box-shadow:0 0 0 4px rgba(220,38,38,.25) !important;
 }
-.field select.invalid option{background:#fff;color:#0d0d0d}
+.field select.invalid option{
+  background:#fff;
+  color:#0d0d0d;
+}
 
-/* ADDRESS */
+/* HIDE COMPLETE ADDRESS UNTIL LOCATION IS SELECTED */
 .location-detail{display:none}
+
 .order-help{font-size:.85rem;color:var(--muted);margin-top:5px}
 .order-form .btn{width:100%;text-align:center}
 .form-error{color:#dc2626;font-size:.9rem;font-weight:700;display:none}
 
 /* DONATION */
-.donation{
-  padding:40px 0;
-  background:#fff;
-  border-bottom:1px solid var(--line)
-}
-.donation-inner{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:30px;
-  text-align:center
-}
+.donation{padding:40px 0;background:#fff;border-bottom:1px solid var(--line)}
+.donation-inner{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;text-align:center}
 .donation h2{font-size:clamp(1.5rem,4vw,2rem);margin-bottom:12px}
 .donation p{max-width:62ch;margin:0 auto 16px;color:#2b2925}
-.donation .donation-note{
-  font-size:.9rem;
-  color:var(--muted);
-  margin-top:12px;
-  margin-bottom:0
-}
+.donation .donation-note{font-size:.9rem;color:var(--muted);margin-top:12px;margin-bottom:0}
 .donation .btn{margin-top:8px}
 
 /* FINAL + FOOTER */
 .final{text-align:center}
 .final h2{max-width:18ch;margin:0 auto 14px}
 .final p{max-width:56ch;margin:0 auto 24px;color:#2b2925}
-footer{
-  background:var(--ink);
-  color:#d8d4cb;
-  text-align:center;
-  padding:40px 20px;
-  font-size:.9rem
-}
-footer img{
-  width:78px;
-  filter:invert(1);
-  display:block;
-  margin:0 auto 14px
-}
+footer{background:var(--ink);color:#d8d4cb;text-align:center;padding:40px 20px;font-size:.9rem}
+footer img{width:78px;filter:invert(1);display:block;margin:0 auto 14px}
 footer a{color:var(--sun)}
-footer .links{
-  display:flex;
-  gap:18px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:10px
-}
+footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:10px}
 
-/* RESPONSIVE */
 @media(max-width:760px){
   .two,.orderrow{grid-template-columns:1fr}
-  .paygrid{
-    grid-template-columns:1fr;
-    max-width:380px;
-    margin-left:auto;
-    margin-right:auto
-  }
+  .paygrid{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}
   section{padding:48px 0}
 
-  .impact-section{padding:25px 0 55px}
-  .impact-grid{
-    aspect-ratio:auto;
-    grid-template-columns:repeat(2,1fr);
-    grid-template-rows:auto;
-    grid-auto-rows:180px;
-    gap:7px;
-    padding:7px
+  .impact-section{
+    padding:42px 0;
   }
+
+  .impact-collage{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:150px 150px auto 190px 150px;
+    gap:7px;
+  }
+
+  .impact-photo.portrait-one{
+    grid-column:1;
+    grid-row:1;
+  }
+
+  .impact-photo.portrait-two{
+    grid-column:2;
+    grid-row:1;
+  }
+
+  .impact-photo.landscape-one{
+    grid-column:1 / 3;
+    grid-row:2;
+  }
+
   .impact-copy{
     grid-column:1 / 3;
-    grid-row:auto;
-    min-height:240px
+    grid-row:3;
+    padding:30px 26px;
   }
-  .impact-copy h2{font-size:clamp(1.8rem,6vw,2.4rem)}
-  .impact-copy p{font-size:.92rem}
 
-  .impact-landscape-one,
-  .impact-landscape-two{
+  .impact-photo.portrait-three{
+    grid-column:1;
+    grid-row:4;
+  }
+
+  .impact-photo.landscape-two{
     grid-column:1 / 3;
-    grid-row:auto
+    grid-row:5;
   }
-  .impact-portrait-one,
-  .impact-portrait-two,
-  .impact-portrait-three{
-    grid-column:auto;
-    grid-row:auto
-  }
-  .impact-portrait-three{grid-column:1 / 3}
 }
 
 @media(max-width:460px){
   .shirtgrid{gap:10px}
   .donation-inner{padding:24px 18px}
-  .impact-grid{grid-auto-rows:145px}
-  .impact-copy{min-height:250px;padding:22px}
-  .impact-copy h2{font-size:1.8rem}
+
+  .impact-collage{
+    grid-template-rows:125px 140px auto 160px 125px;
+    gap:6px;
+  }
+
+  .impact-copy{
+    padding:26px 22px;
+  }
+
+  .impact-copy h2{
+    font-size:1.8rem;
+  }
+
+  .impact-copy p{
+    font-size:.9rem;
+  }
 }
 </style>
 </head>
@@ -663,9 +348,7 @@ footer .links{
 
 <header class="hero">
   <div class="wrap">
-    <div class="logo">
-      <img src="logo.png" alt="Anonymous Project · here to help">
-    </div>
+    <div class="logo"><img src="logo.png" alt="Anonymous Project · here to help"></div>
 
     <h1>Wear the shirt. <em>Feed a neighbor.</em></h1>
 
@@ -714,15 +397,26 @@ footer .links{
 <!-- WHY WE ARE DOING THIS + PHOTO COLLAGE -->
 <section class="impact-section">
   <div class="wrap">
-    <div class="impact-grid">
+    <div class="impact-collage">
 
-      <!-- TEXT TILE -->
+      <div class="impact-photo portrait-one">
+        <img src="impact-01.jpg" alt="Children from the community" loading="lazy">
+      </div>
+
+      <div class="impact-photo portrait-two">
+        <img src="impact-02.jpg" alt="Children gathered in the community" loading="lazy">
+      </div>
+
+      <div class="impact-photo landscape-one">
+        <img src="impact-03.jpg" alt="Community members gathered together" loading="lazy">
+      </div>
+
       <div class="impact-copy">
         <div class="kicker">Why we are doing this</div>
 
         <h2>
-          Small acts can build
-          <span class="highlight">brighter futures.</span>
+          Some people go to sleep hungry tonight.
+          <span class="highlight">We can change that.</span>
         </h2>
 
         <p>
@@ -731,61 +425,28 @@ footer .links{
         </p>
 
         <p>
-          Before the year ends, our team will visit an <b>Indigenous community</b>
-          to share food and basic necessities with its members, and reach out to
-          people living on the street. Face to face, with our own hands.
+          Before the year ends, our team will visit an <strong>Indigenous community</strong>
+          and share food and basic necessities with its members, and reach out to people
+          on the street who have no home. Face to face, with our own hands.
         </p>
 
-        <p class="impact-note">
-          Every shirt and every donation brings us one step closer.
+        <p>
+          No big event. Just people showing up for people.
         </p>
       </div>
 
-      <!-- LANDSCAPE PHOTO 1 -->
-      <figure class="impact-item impact-landscape-one">
-        <img src="impact-03.jpg"
-             alt="A group of children and community members receiving support"
-             loading="lazy">
-      </figure>
+      <div class="impact-photo portrait-three">
+        <img src="impact-04.jpg" alt="Children in the community" loading="lazy">
+      </div>
 
-      <!-- LANDSCAPE PHOTO 2 -->
-      <figure class="impact-item impact-landscape-two">
-        <img src="impact-05.jpg"
-             alt="Children gathered together in their community"
-             loading="lazy">
-      </figure>
+      <div class="impact-photo landscape-two">
+        <img src="impact-05.jpg" alt="Children and families gathered outdoors" loading="lazy">
+      </div>
 
-      <!-- PORTRAIT PHOTO 1 -->
-      <figure class="impact-item impact-portrait-one">
-        <img src="impact-01.jpg"
-             alt="Children in the community"
-             loading="lazy">
-      </figure>
-
-      <!-- PORTRAIT PHOTO 2 -->
-      <figure class="impact-item impact-portrait-two">
-        <img src="impact-02.jpg"
-             alt="Children standing together"
-             loading="lazy">
-      </figure>
-
-      <!-- PORTRAIT PHOTO 3 -->
-      <figure class="impact-item impact-portrait-three">
-        <img src="impact-04.jpg"
-             alt="Children gathered outdoors"
-             loading="lazy">
-      </figure>
-
-    </div>
-
-    <div class="verse" style="margin-top:22px">
-      <q>Let us not love with <span>words or speech</span>, but with <span>action and in truth.</span></q>
-      <cite>1 John 3:18</cite>
     </div>
   </div>
 </section>
 
-<!-- SHIRT -->
 <section class="shirt">
   <div class="wrap">
     <div class="kicker">The shirt</div>
@@ -815,7 +476,6 @@ footer .links{
   </div>
 </section>
 
-<!-- DONATION -->
 <section class="donation" id="donation">
   <div class="wrap">
     <div class="donation-inner">
@@ -843,7 +503,6 @@ footer .links{
   </div>
 </section>
 
-<!-- PAYMENT METHODS -->
 <section class="pay" id="pay">
   <div class="wrap">
     <div class="kicker">Payment methods</div>
@@ -896,7 +555,6 @@ footer .links{
   </div>
 </section>
 
-<!-- SHIRT ORDER -->
 <section class="pay" id="order">
   <div class="wrap">
     <div class="kicker">Shirt pre-order</div>
@@ -1011,7 +669,6 @@ footer .links{
   </div>
 </section>
 
-<!-- FINAL -->
 <section class="final">
   <div class="wrap">
     <h2>Small shirt. Big heart.</h2>
@@ -1154,6 +811,7 @@ $("orderForm").addEventListener("submit", event => {
   clearFormError();
   sizeSelect.classList.remove("invalid");
 
+  /* CHECK SIZE FIRST */
   if (!size || !CONFIG.sizes.includes(size)) {
     sizeSelect.classList.add("invalid");
     showFormError("Please select your shirt size.");
@@ -1229,7 +887,7 @@ $("donationBtn").addEventListener("click", () => {
   window.open(messengerLink, "_blank", "noopener,noreferrer");
 });
 
-/* SHARE PAGE */
+/* SHARE PAGE: COPY THE WEBSITE URL */
 $("shareBtn").addEventListener("click", async () => {
   const btn = $("shareBtn");
   const message = $("shareMessage");
